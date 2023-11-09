@@ -1,1 +1,27 @@
+import sys
+def welcome():
+    print("Welcome to Jonah and Preet's Flood helper!")
+def main():
+    welcome()
+    current_prep_input=input("Are You currently in a flood or are you trying to prep for one(c for current, p for prep, q for quit): ")
+    current_prep_input=current_prep_input.lower()
+    validated_inpt=validator(current_prep_input)
+    #print(validated_inpt)
+    #if validated_inpt=='c':
+        #call in file for current
+    #if validated_inpt=='p':
+        #call in file for prep
+    #if validated_inpt=='q':
+        #print('Thank you, have a good day!')
+        #quit program
+
+def validator(unval_in):
+    while unval_in not in ['c','p','q']:
+            print('please give valid input')
+            unval_in=input("Are You currently in a flood or are you trying to prep for one(c for current, p for prep, q for quit): ")
+            unval_in=unval_in.lower()
+    return unval_in
+
+if __name__=="__main__":
+    main()
 
