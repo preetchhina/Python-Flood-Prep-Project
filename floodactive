@@ -1,1 +1,10 @@
-
+def welcomeActive():
+    print("Welcome to active flood program")
+    print("We will help you get through a flood safely!")
+def floodActive:
+    location= input("Where are you", "Options: Home, Outdoors, Indoors")
+    location= location.lower()
+    if location != "home" or location != "outdoors" or location != "indoors":
+        print("Sorry that is not a option")
+        location= input("Where are you", "Options: Home, Outdoors, Indoors")
+    return location
