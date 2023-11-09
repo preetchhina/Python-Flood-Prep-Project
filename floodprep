@@ -1,1 +1,29 @@
+def welcomeprep():
+    print("Welcome to Flood Prep!\nWe will help asses your danger to flooding and help you get ready accordingly")
+def prep():
+    last4years=[]
+    welcomeprep()
+    #how serious is the risk, low, medium, high
+    while len(last4years)!= 4:#ask for avgs of the last 4 years
+        yearinput=int(input("Please enter the avg rainfall of a year prior: "))
+        last4years.append(yearinput)
+        #calculate the average from those 4
+        last4avg=sum(last4years)/len(last4years)
+        #print (last4years)
+        #print(last4avg)
+        #compare that avg to our low, high(using avg of 30 as divider)
+        if last4avg in range(0,30):#low risk
+            #print(line 1-9)
+            #with open(data_file,'r') as file:
+                #for i in range(9):
+                    #print(file.readline())
+        if last4avg>30:#high risk
+            #give tips and tricks to prepare for high risk flood areas
+            #with open(data_file,'r') as file:
+                #for i in range(11,30):
+                    #print(file.readline())
+        
+        
+    #pull advivice on which ever risk level it is and present it. 
+
 
