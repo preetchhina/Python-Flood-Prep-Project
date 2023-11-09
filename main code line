@@ -1,4 +1,5 @@
 import sys
+import floodprep
 def welcome():
     print("Welcome to Jonah and Preet's Flood helper!")
 def main():
@@ -10,8 +11,7 @@ def main():
     #if validated_inpt=='c':
         #call in file for current
     #if validated_inpt=='p':
-        #call in file for prep
-        #import prep_file
+        #floodprep.prep()
     #if validated_inpt=='q':
         #print('Thank you, have a good day!')
         #quit program
