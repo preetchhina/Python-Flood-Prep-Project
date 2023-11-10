@@ -23,3 +23,10 @@ def floodStrength:
         #open data file
     if userStrength in range(7-11):
         #open data file
+def totalRainfall():
+    numberOfDays = int(input("Enter the number of days to simulate the current rainfall: "))
+    totalRainfall = 0
+    for day in range(1, numberOfDays + 1):
+        dailyRainfall = float(input("Enter the rainfall in inches for Day " + str(day) + ": "))
+        totalRainfall += dailyRainfall
+    print("\nTotal rainfall over " + str(numberOfDays) + " days: " + str(totalRainfall) + " inches")
