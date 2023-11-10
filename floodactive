@@ -1,10 +1,25 @@
 def welcomeActive():
     print("Welcome to active flood program")
     print("We will help you get through a flood safely!")
-def floodActive:
+def floodLocation:
     location= input("Where are you", "Options: Home, Outdoors, Indoors")
     location= location.lower()
-    if location != "home" or location != "outdoors" or location != "indoors":
+    while location != "home" or location != "outdoors" or location != "indoors":
         print("Sorry that is not a option")
         location= input("Where are you", "Options: Home, Outdoors, Indoors")
-    return location
+    if location == "outdoors":
+        #open file
+    elif location == "indoors":
+        #open file
+    else:
+        location == "home"
+        #open file
+ 
+def floodStrength:
+    userStrength= input("What is the strength of the current rainfall", "Options: 1-10 (10 being the strongest")
+    if userStrength in range(0-4):
+        #open data file
+    if userStrength in range(4-7):
+        #open data file
+    if userStrength in range(7-11):
+        #open data file
