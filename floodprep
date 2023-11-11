@@ -1,5 +1,5 @@
 def welcomeprep():
-    print("Welcome to Flood Prep!\nWe will help asses your danger to flooding and help you get ready accordingly")
+    print("Welcome to Flood Prep!\nWe will help assess your danger to flooding and help you get ready accordingly")
 def prep():
     last4years=[]
     welcomeprep()
@@ -24,6 +24,6 @@ def prep():
                     #print(file.readline())
         
         
-    #pull advivice on which ever risk level it is and present it. 
+    #pull advice on whichever risk level it is and present it. 
 
 
