@@ -2,15 +2,17 @@
 def welcomeActive():
     print("Welcome to active flood program")
     print("We will help you get through a flood safely!")
+    print("\n")
 #function which gives informatio based on where the user is located and also has a validation loop which validates the input is a validate input
 def floodLocation():
-    location= input("Where are you", "Options: Home, Outdoors, Indoors")
+    location = input("Where are you? Options: Home, Outdoors, Indoors: ")
     location= location.lower()
-    while location != "home" or location != "outdoors" or location != "indoors":
+    while location not in ["home", "outdoors", "indoors"]:
         print("Sorry that is not a option")
-        location= input("Where are you", "Options: Home, Outdoors, Indoors")
+        location = input("Where are you? Options: Home, Outdoors, Indoors ")
+        location = location.lower()
     if location == "outdoors":
-        with open('Users/preetchhina/Documents/activeOutdoors.txt') as file:
+        with open('/Users/preetchhina/Documents/activeOutdoors.txt') as file:
             print(file.read())
             
     elif location == "indoors":
@@ -18,24 +20,25 @@ def floodLocation():
             print(file.read())
                 
     else:
-        location == "home"
         with open('/Users/preetchhina/Documents/activeHome.txt','r') as file:
             print(file.read())
+    print("\n")
             
  
 #function which gives information based on the strength of the rainfall
 def floodStrength():
-    userStrength= input("What is the strength of the current rainfall", "Options: 1-10 (10 being the strongest")
-    if userStrength in range(0-3):
+    userStrength = int(input("What is the strength of the current rainfall? Options: 1-10 (10 being the strongest): "))
+    if userStrength >= 0 and userStrength <= 3:
         print("No evacuation needed. Monitor the situation.")
-    elif userStrength in range(3-6):
+    elif userStrength>3 and userStrength <= 6:
         print("Consider evacuation. Prepare for possible evacuation orders.")
-    elif userStrength in range(7-10):
+    elif userStrength > 6 and userStrength < 10:
         print("Evacuate recommended. Follow evacuation orders.")
-    elif userStrength == "10":
+    elif userStrength == 10:
         print("Mandatory evacuation! Evacuate immediately. Follow emergency protocols.")
     else:
         print("Invalid input. Please enter a strength between 1 and 10.")
+    print("\n")
 #function which calculates total rainfall in inches by taking input for the number of days and adding each day's rainfall together for the total rainfall
 def totalRainfall():
     numberOfDays = int(input("Enter the number of days to simulate the current rainfall: "))
@@ -44,5 +47,9 @@ def totalRainfall():
         dailyRainfall = float(input("Enter the rainfall in inches for Day " + str(day) + ": "))
         totalRainfall += dailyRainfall
     print("\nTotal rainfall over " + str(numberOfDays) + " days: " + str(totalRainfall) + " inches")
+def mainActive():
+    welcomeActive()
+    floodLocation()
+    floodStrength()
+    totalRainfall()
 
-    
