@@ -1,8 +1,11 @@
+#We Solve it, cs1, Jonah and Preet, 11/13/2023
 import sys
 import floodprep import file like a module to help identify bugs and make code cleaner
 import floodactive #import alt file
+#welome function
 def welcome():
     print("Welcome to Jonah and Preet's Flood helper!")
+#main function of our code will be calling all files and be the main branch off
 def main():
     welcome()
     current_prep_input=input("Are You currently in a flood or are you trying to prep for one(c for current, p for prep, q for quit): ")
@@ -15,7 +18,7 @@ def main():
     if validated_inpt=='q':
         print('Thank you, have a good day!')
         sys.exit #quit program
-
+#validator will be used to validate the main input of the function above
 def validator(unval_in):
     while unval_in not in ['c','p','q']:
             print('please give valid input')
