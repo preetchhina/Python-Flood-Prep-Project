@@ -1,6 +1,7 @@
-
+#We Solve it, cs1, Jonah and Preet, 11/13/2023
 def welcomeprep():#welcome function
     print("Welcome to Flood Prep!\nWe will help asses your danger to flooding and help you get ready accordingly")
+#this is going to be the main function of this code, willa sk for imputs and display outputs 
 def prep():
     last4years=[]
     welcomeprep()
