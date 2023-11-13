@@ -12,8 +12,6 @@ def prep():
         last4years.append(yearinput)
     #calculate the average from those 4
     last4avg=sum(last4years)/len(last4years)
-    print (last4years)
-    print(last4avg)
         #compare that avg to our low, high(using avg of 30 as divider)
     if last4avg<=30:#low risk option 
             #print(line 1-9)
