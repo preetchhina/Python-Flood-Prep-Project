@@ -1,20 +1,20 @@
 import sys
-import floodprep
+import floodprep import file like a module to help identify bugs and make code cleaner
+import floodactive #import alt file
 def welcome():
     print("Welcome to Jonah and Preet's Flood helper!")
 def main():
     welcome()
     current_prep_input=input("Are You currently in a flood or are you trying to prep for one(c for current, p for prep, q for quit): ")
     current_prep_input=current_prep_input.lower()
-    validated_inpt=validator(current_prep_input)
-    #print(validated_inpt)
-    #if validated_inpt=='c':
-        #call in file for current
-    #if validated_inpt=='p':
-        #floodprep.prep()
-    #if validated_inpt=='q':
-        #print('Thank you, have a good day!')
-        #quit program
+    validated_inpt=validator(current_prep_input)#validates input 
+    if validated_inpt=='c':
+        floodactive.mainActive()#call in file for current
+    if validated_inpt=='p':
+        floodprep.prep()
+    if validated_inpt=='q':
+        print('Thank you, have a good day!')
+        sys.exit #quit program
 
 def validator(unval_in):
     while unval_in not in ['c','p','q']:
