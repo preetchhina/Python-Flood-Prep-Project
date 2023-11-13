@@ -18,13 +18,11 @@ def prep():
     if last4avg<=30:#low risk
             #print(line 1-9)
         with open('data_file.txt','r') as file:
-            for i in range(9):
-                print(file.readline())
+            print(file.read())
     if last4avg>30:#high risk
             #give tips and tricks to prepare for high risk flood areas
-        with open('data_file.txt', 'r') as file:
-            for i in range(11,30):
-                print(file.readline())
+        with open('data_file02.txt', 'r') as file:
+            print(file.read())
         
         
     #pull advivice on which ever risk level it is and present it.
