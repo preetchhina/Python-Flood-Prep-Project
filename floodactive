@@ -10,15 +10,21 @@ def floodLocation():
         print("Sorry that is not a option")
         location= input("Where are you", "Options: Home, Outdoors, Indoors")
     if location == "outdoors":
-        #open file
+        with open('Users/preetchhina/Documents/activeOutdoors.txt') as file:
+            print(file.read())
+            
     elif location == "indoors":
-        #open file
+        with open('/Users/preetchhina/Documents/activeIndoors.txt','r') as file:
+            print(file.read())
+                
     else:
         location == "home"
-        #open file
+        with open('/Users/preetchhina/Documents/activeHome.txt','r') as file:
+            print(file.read())
+            
  
 #function which gives information based on the strength of the rainfall
-def floodStrength:
+def floodStrength():
     userStrength= input("What is the strength of the current rainfall", "Options: 1-10 (10 being the strongest")
     if userStrength in range(0-3):
         print("No evacuation needed. Monitor the situation.")
@@ -38,3 +44,5 @@ def totalRainfall():
         dailyRainfall = float(input("Enter the rainfall in inches for Day " + str(day) + ": "))
         totalRainfall += dailyRainfall
     print("\nTotal rainfall over " + str(numberOfDays) + " days: " + str(totalRainfall) + " inches")
+
+    
