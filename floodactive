@@ -1,7 +1,7 @@
 def welcomeActive():
     print("Welcome to active flood program")
     print("We will help you get through a flood safely!")
-def floodLocation:
+def floodLocation():
     location= input("Where are you", "Options: Home, Outdoors, Indoors")
     location= location.lower()
     while location != "home" or location != "outdoors" or location != "indoors":
@@ -17,12 +17,16 @@ def floodLocation:
  
 def floodStrength:
     userStrength= input("What is the strength of the current rainfall", "Options: 1-10 (10 being the strongest")
-    if userStrength in range(0-4):
-        #open data file
-    if userStrength in range(4-7):
-        #open data file
-    if userStrength in range(7-11):
-        #open data file
+    if userStrength in range(0-3):
+        print("No evacuation needed. Monitor the situation.")
+    elif userStrength in range(3-6):
+        print("Consider evacuation. Prepare for possible evacuation orders.")
+    elif userStrength in range(7-10):
+        print("Evacuate recommended. Follow evacuation orders.")
+    elif userStrength == "10":
+        print("Mandatory evacuation! Evacuate immediately. Follow emergency protocols.")
+    else:
+        print("Invalid input. Please enter a strength between 1 and 10.")
 def totalRainfall():
     numberOfDays = int(input("Enter the number of days to simulate the current rainfall: "))
     totalRainfall = 0
